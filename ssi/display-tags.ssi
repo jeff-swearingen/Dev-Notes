@@ -1,0 +1,26 @@
+<h4>Display tags</h4>
+
+<pre>:block
+:compact
+:inherit
+:inline
+:inline-block
+:inline-table
+:list-item
+:marker
+:none <span class="grey">/* Hidden object is removed from layout but is available through the DOM, but NOT to screen readers */</span>
+:run-in
+:table
+:table-caption
+:table-cell
+:table-column
+:table-column-group
+:table-footer-group
+:table-header-group
+:table-row
+:table-row-group
+</pre>
+
+<p>Visibility:</p>
+
+<pre>visibility: hidden <span class="grey">/* Hidden object's empty space remains in layout */</span></pre>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]--><head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Preprocessors</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <meta name="robots" content="noindex">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <link rel="icon" type="image/png" href="/images/favicon/skeleton.png" /> 
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/docs.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    
+<style>
+.test1 {
+	width: 80px;
+	float: left;
+}
+.test2 {
+	width: 60%;
+	float: left;
+}
+
+</style>
+    
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+	<!-- The container is a centered 960px -->
+
+
+<div class="container">
+<!-- Give column value in word form (one, twoABCD, twelve) -->
+
+
+
+<!-- Sweet nested columns cleared with a clearfix class -->
+<div class="three columns sidebar">
+	<nav>
+						
+	<?php include('_ssi/nav.ssi');?></nav>
+					&nbsp;
+</div>
+                
+<div class="twelve columns offset-by-one content">
+					
+	<?php include('_ssi/header.ssi');?> 
+					
+<h2>CSS Preprocessors</h2>                    
+                    
+                    
+<h3>Sass</h3>
+
+<h4>Variables</h4>
+
+<p>Sass <code>variables</code> are declared using <code>$</code> character and are defined like CSS values. <code>Variables</code> can be one of six different types:</p>
+
+
+ <!-- Sweet nested columns cleared by <br class="clear"> -->
+ 
+<div class="test1">
+    	<p>numbers</p>
+        <p>strings</p>
+        <p>colors</p>
+        <p>booleans</p>
+        <p>nulls</p>
+        <p>lists</p>
+</div>
+
+<div class="test2">
+        <p><code>$myVar: .25in;</code></p>
+        <p><code>$myStr: "some piece of text";</code></p>
+        <p><code>$myColor: blue;</code></p>
+        <p><code>$myBool: false;</code> &nbsp;<span class="note">(either true or false)</span></p>
+        <p><code>$myVar: null;</code></p>
+        <p><code>$myList: 1px solid black;</code></p>
+</div>
+
+<br class="clear" />
+
+
+<h4>Nesting</h4>
+
+<p>Elements in the same <code>class</code> can be nested. Note how <code>li</code> and <code>img</code> are nested in <code>ul</code> which is wrapped inside the <code>.pixgrid</code> class?</p>
+
+
+<section class="cf">
+
+
+
+<pre class="declarationDemo-col-a">
+
+<strong>Conventional CSS:</strong>
+
+.pixgrid ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.pixgrid ul li {
+    float: left;
+    width: 96px;
+    height: 96px;
+    padding: 0 5px 5px 0;
+}
+.pixgrid ul img {
+    max-width: 96px;
+    cursor: pointer;
+}
+</pre>
+
+
+
+<pre class="declarationDemo-col-a">
+
+<strong>Sass:</strong>
+
+<span class="red">.pixgrid</span> {
+  <span class="red">ul</span> {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    <span class="red">li</span> {
+        float: left;
+        width: 96px;
+        height: 96px;
+        padding: 0 5px 5px 0;
+    }
+    <span class="red">img</span> {
+        max-width: 96px;
+        cursor: pointer;
+    }
+  }
+}
+</pre>
+</section>
+
+
+<h4>Operators</h4>
+
+<p>Allow you to add math to your CSS. Here a variable for <code>$border_thickness</code> is set to <code>1px;</code> while another variable named <code>$thicker</code> can be used to multiply the original border thickness by a factor of 5:</p>
+
+<pre>
+$border_thickness : 1px;
+$thicker : $border_thickness*5;
+
+.sidebar {
+    <span class="red">border: $thicker solid black;</span>
+}
+</pre>
+
+
+<h4>Controls</h4>
+
+<p><code>Controls</code> work like JavaScript <code>Conditionals</code> so certain styles can be applied on certain parameters.</p>
+
+<p>Here the <code>border_thickness</code> is set to less than or equal to 1px and the <code>background-color</code> is red. But with the Controls setting, if the <code>border_thickness</code> is anything other than 1px the <code>background-color</code> would be yellow:</p>
+
+<pre><span class="red">$border_thickness</span> : 1px;
+<span class="red">$thicker : $border_thickness*5</span>;
+
+.sidebar {
+    <span class="red">@if</span> (<span class="red">$border_thickness</span><=1) {
+        background-color: red;
+    } <span class="red">@else</span> {
+        background-color: yellow;
+    }
+}
+</pre>
+
+<p>So the above declaration block would have the following output:</p>
+
+<pre>
+.sidebar {
+    background-color: red;
+}
+</pre>
+    
+    
+<h4>Mixins</h4>
+
+<p><code>Mixins</code> are exactly like JavaScript <code>functions</code>.</p>    
+
+<p>In the example below, the vendor prefixes for the Webkit <strong>CSS3</strong> border-radius plus the default property for border-radius are combined and set to a default value of 10px. However, the custom value of 20px (or any other px value) is added but will fall back to 10px if not used.</p>
+
+<pre>
+<span class="red">@mixin</span> rounded( <span class="red">$radius</span>: 10px) {
+    -webkit-border-radius: <span class="red">$radius</span>;
+    border-radius: <span class="red">$radius</span>;
+    background-clip: padding-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+        li img {
+        display: block;
+        <span class="red">@include</span> rounded(20px);
+    }
+}
+
+</pre>
+
+<p>This is the output, just like if you used the <em>CSS3, please!</em> website:</p>
+
+<pre>
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul li img {
+    display: block;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    background-clip: padding-box;    
+}
+</pre>
+
+
+
+<h4>Workflow options</h4>
+
+
+
+
+ 
+ 
+<!--<div class="eleven columns">
+	<div class="two columns alpha">
+    	<p>numbers</p>
+        <p>strings</p>
+        <p>colors</p>
+        <p>booleans</p>
+        <p>nulls</p>
+        <p>lists</p>
+    </div>
+
+	<div class="seven columns alpha">
+        <p><code>$myVar: .25in;</code></p>
+        <p><code>$myStr: "some piece of text";</code></p>
+        <p><code>$myColor: blue;</code></p>
+        <p><code>$myBool: false;</code> &nbsp;<span class="note">(either true or false)</span></p>
+        <p><code>$myVar: null;</code></p>
+        <p><code>$myList: 1px solid black;</code></p>
+	</div>
+</div>
+<br class="clear" />
+-->
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p class="note">Question: How does Sass handle vendor prefixes?</p>
+                    
+
+</div><!-- Close twelve columns offset-by-one content -->
+               
+</div><!-- Close .container div -->
+ 
+<!-- Note: To clear columns (both nested and just stacked columns right inside the
+.container, you can give the parent a class of "clearfix," wrap each row of columns in a
+"<div class='row'>" or follow the last column in a row with a "<br class='clear'>." They
+all work and it's up to your personal preference. -->
+    
+
+<!-- End Document ================================================== -->
+</body>
+</html>

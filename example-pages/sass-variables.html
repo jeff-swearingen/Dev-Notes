@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SASS Sample Document: Variables</title>
+<link rel="stylesheet" href="../_css/var_styles.css" type="text/css">
+<style>
+.examplecss {
+	font-family: arial;
+	color: #333;
+}
+pre {
+	color: #FF00FF;
+	font-size: 90%;
+}
+</style>
+</head>
+<body>
+
+<h3 class="examplecss">Pre-compiled CSS:</h3>
+
+<pre>
+<span style="color: #999;">/* 
+ * SASS Variables are defined with a $ character
+ * and can have different kinds of data types: color, string, boolean, multi-value
+ */</span>
+
+$myColor1: navy;                            <span style="color: #999;">// named color value</span>
+$myColor2: #000080;                         <span style="color: #999;">// hex color value</span>
+$myStringVar: " with an appended string";   <span style="color: #999;">// string variable</span>
+$myFontFamily: Arial;                       <span style="color: #999;">// font value</span>
+$myFontSize: 18px;                          <span style="color: #999;">// numeric value</span>
+$thinBorder: 1px solid $myColor1;           <span style="color: #999;">// multi-value variable</span>
+$paddingVar: 15px 15px 15px 15px;           <span style="color: #999;">// multi-value variable</span>
+
+body {
+	font-family: Arial;
+}
+
+h1, h2 {
+    color: $myColor1;
+}
+
+#mypara {
+    <span style="color: #000080;">font-size: $myFontSize;</span>
+    <span style="color: #000080;">border: $thinBorder;</span>
+    <span style="color: #000080;">padding: $paddingVar;</span>
+}
+
+#mypara:after {
+    <span style="color: #000080;">content: $myStringVar;</span>
+    <span style="color: #000080;">color: red;</span>
+    <span style="color: #000080;">font-style: italic;</span>
+}
+</pre>
+
+<h3 class="examplecss">Compiled CSS:</h3>
+
+<pre>
+<span style="color: #999;">/* 
+ * SASS Variables are defined with a $ character
+ * and can have different kinds of data types: color, string, boolean, multi-value
+ */</span>
+ 
+h1, h2 {
+	<span style="color: #000080;">color: navy;</span>
+}
+
+#mypara {
+	<span style="color: #000080;">font-size: 18px;</span>
+	<span style="color: #000080;">border: 1px solid navy;</span>
+	<span style="color: #000080;">padding: 15px 15px 15px 15px;</span>
+}
+
+#mypara:after {
+	<span style="color: #000080;">content: " with an appended string";</span>
+	<span style="color: #000080;">color: red;</span>
+	<span style="color: #000080;">font-style: italic;</span>
+}
+</pre>
+
+
+<div id="pagecontent">
+     <header>
+          <h1>SASS Sample Document</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+     </header>
+     <div>
+          <p id="mypara">Sample paragraph of text</p>
+          <p>Another paragraph of text</p>
+     </div>
+     <div>
+          <ul id="list1">
+               <li>List Item 1</li>
+               <li>List Item 2</li>
+               <li>List Item 3</li>
+               <li>List Item 4</li>
+               <li>List Item 5</li>
+               <li>List Item 6</li>
+          </ul>
+     </div>
+     <footer>
+          <h3>This is some footer content</h3>
+     </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<h4>Link Outline Reset</h4>
+
+<p>Williamson recommends adding these link styles for assistive devices/user agents for accessibility and to prevent Chrome from applying non-assigned colors to the <code>outline</code>:</p>
+
+<pre>
+a:focus {
+     outline: thin dotted;
+}
+a:hover, a:active {
+     outline: 0;
+}
+</pre>
+
+<p class="note">NOTE: In an <code>a</code> tag, setting <code>text-decoration:</code> to <code>none;</code> will remove the <code>outline</code>.</p>

@@ -1,0 +1,46 @@
+<h4>Vendor Extension Prefixes</h4>
+
+<table id="vendorExtensions" border="0" cellpadding="5" cellspacing="0" width="65%">
+<thead>
+<tr>
+<th scope="col">Prefix</th>
+<th scope="col">Organization</th>
+</tr>
+</thead>
+
+  <tbody><tr>
+    <td>-ms-</td>
+    <td>Microsoft</td>
+    </tr>
+  <tr>
+    <td>mso-</td>
+    <td>Microsoft Office</td>
+    </tr>
+  <tr>
+    <td>-moz-</td>
+    <td>Mozilla Foundation</td>
+    </tr>
+  <tr>
+    <td>-o-</td>
+    <td>Opera Software</td>
+    </tr>
+  <tr>
+    <td>-atsc-</td>
+    <td>Advanced Television Standards Committee</td>
+  </tr>
+  <tr>
+    <td>-wap-</td>
+    <td>The WAP Forum</td>
+  </tr>
+  <tr>
+    <td>-webkit-</td>
+    <td>Safari, Chrome</td>
+  </tr>
+  <tr>
+    <td>-khtml-</td>
+    <td>Konqueror browser</td>
+  </tr>
+</tbody></table>
+
+
+<p><a href="http://reference.sitepoint.com/css/vendorspecific" target="_blank">http://reference.sitepoint.com/css/vendorspecific</a></p>

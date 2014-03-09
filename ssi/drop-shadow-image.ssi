@@ -1,0 +1,13 @@
+<h4>Drop Shadow Image</h4>
+
+<div class="cf">
+<img src="../_ssi/_images/grass.jpg" alt="Grass" width="200" height="200" class="imgDropShadow" />
+
+<pre class="imgDropShadow"><h5>CSS:</h5> .imgDropShadow {
+-moz-box-shadow: 5px 5px 10px #000; <span class="grey">/*(10px highlight is the "blur" radius)*/</span>
+-o-box-shadow: 5px 5px 10px #000;
+-webkit-box-shadow: 5px 5px 10px #000;
+box-shadow: 5px 5px 10px #000; <span class="grey">/*(Default setting left in for later adoption)*/</span>
+}</pre>
+</div>
+

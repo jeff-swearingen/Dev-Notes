@@ -1,0 +1,12 @@
+<section class="bodyHighlight">
+<h4>Resetting the Box Model</h4>
+
+<p>This declaration added to the reset tells the browers to include border and padding widths and heights into the Box Model to prevent float drops. In other words, the box model elements are <em>not cumulative</em> and will conform to the width of the value assigned to the containing element:</p>
+
+<pre>* { 
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}</pre>
+
+<p class="note">Note: Understood by all current browsers (plus IE 8) except for Mozilla</p>
+</section>

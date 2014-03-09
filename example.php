@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="noindex" />
+<title>Example</title>
+
+
+<!--<link href="css/screen.css" rel="stylesheet" type="text/css" />-->
+
+<link href="../ssi/css/reset2.css" rel="stylesheet" type="text/css" />
+<link href="../ssi/css/example.css" rel="stylesheet" type="text/css" />
+<link href="../ssi/css/main2.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <?php include('ssi/header.ssi');?>
+
+  <div class="sidebar1">
+
+   
+    <?php include('ssi/nav.ssi');?>
+    
+
+    </div><!-- end .sidebar1 -->
+  
+  
+  
+  <!-- *****CONTENT***** -->
+ 
+  
+  <div class="content">
+
+<h3>Declaration Block</h3>
+
+<p><strong>Declaration block:</strong> {<span class="highlight">font</span>: <span class="royalblue">1px Arial</span>; <span class="highlight">color</span>: <span class="royalblue">#000</span>;}</p>
+<p><strong>Property:</strong> Anything <span class="highlight">before</span> a colon inside the <strong>declaration block</strong></p>
+<p><strong>Value:</strong> Anything <span class="royalblue">after</span> the colon inside the <strong>declaration block</strong></p>
+
+<p class="italic">Example:</p>
+
+    <dl>
+        <dt><span class="royalblue">h1</span> {</dt>
+        <dd><span class="green">font</span>: <span class="indianred">1em Arial</span>;</dd> 
+        <dd><span class="green">color</span>: <span class="indianred">#000</span>;</dd>
+        <dt>}</dt>
+    </dl>
+
+<p><span class="royalblue">Selector</span>, <span class="green">Property</span>, <span class="indianred">Value</span></p>
+
+<h3>Doctype Declaration</h3>
+
+<p>Best to use the HTML5 version:</p>
+
+<pre>
+&lt;!doctype html&gt;
+ &lt;html&gt;
+  &lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+  &lt;/head&gt;
+ &lt;body&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Additionally, in HTML5 the style tag reads just like this:</p>
+<pre>
+&lt;style&gt;
+&lt;/style&gt;
+</pre>
+  
+
+<h3>The Cascade</h3>
+	<ul>
+        <li><em>The last style applied wins</em></li>
+        <li>Embedded style will overwrite linked stylesheet if embedded CSS is below the linked CSS</li>
+        <li>Inline style will overwrite anything else</li>
+	</ul>
+    
+<h3>Specificity</h3>
+
+<p>In the conflict between two selectors that inheritance can't solve, the specificity of the selector is used to determine which selector has precedence.</p>
+
+<p><em>The more specific rule (the higher number) wins</em></p>
+
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
+<thead>
+<tr>
+<th scope="col">Selector</th>
+<th scope="col">Inline</th>
+<th scope="col">ID</th>
+<th scope="col">Class</th>
+<th scope="col">Element</th>
+<th scope="col">Total</th>
+</tr>
+</thead>
+
+  <tbody><tr>
+    <td width="25%">&lt;p style=&quot;color: red&quot;&gt;</td>
+    <td align="center" width="15%">1</td>
+    <td align="center" width="15%">0</td>
+    <td align="center" width="15%">0</td>
+    <td align="center" width="15%">0</td>
+    <td align="center" width="15%">1000</td>
+  </tr>
+  <tr>
+    <td width="25%">p</td>
+    <td bgcolor="#ffcc00" width="15%">0</td>
+    <td bgcolor="#ffcc00" width="15%">0</td>
+    <td bgcolor="#ffcc00" width="15%">0</td>
+    <td bgcolor="#ffcc00" width="15%">1</td>
+    <td bgcolor="#ffcc00" width="15%">1</td>
+  </tr>
+  <tr>
+    <td width="25%">h1.special</td>
+    <td width="15%">0</td>
+    <td width="15%">0</td>
+    <td width="15%">1</td>
+    <td width="15%">1</td>
+    <td width="15%">11</td>
+  </tr>
+  <tr>
+    <td width="25%">#mainContent h2</td>
+    <td bgcolor="#ffd600" width="15%">0</td>
+    <td bgcolor="#ffd600" width="15%">1</td>
+    <td bgcolor="#ffd600" width="15%">0</td>
+    <td bgcolor="#ffd600" width="15%">1</td>
+    <td bgcolor="#ffd600" width="15%">101</td>
+  </tr>
+</tbody></table>
+ 
+ 
+    
+<p>If specificity deconfliction doesn't work then the problem is with your cascade.</p>    
+    
+<h4>Specificity Strategy</h4>
+
+<ul>
+	<li>Don't mix class and ID selectors without having a plan that guides when they are to be used</li>
+	<li>Sections of ID selectors can be hard to overwrite later if not accounted for</li>
+	<li>If you find yourself writing descendent selectors with three or more selectors, consider revising your strategy</li>            
+</ul>
+
+<h4>Use Inheritance to Your Advantage</h4>
+
+<ul>
+	<li>If you are familiar with your page structure, you should be able to identify global formatting across your site</li>
+	<li>Those formatting needs can then be written as global styles on parent elements, and inherited by the rest of the site</li>
+	<li>This results in fewer rules to write and easier styles to maintain</li>            
+</ul>
+
+<h4>Think About How Styles Relate to One Another</h4>
+
+<ul>
+	<li>New designers often make the mistake of styling each element individually as it's encountered</li>
+	<li>This leads to bloated style sheets and hard to maintain styles</li>
+	<li>Thinking of styles as related formatting allows you to plan and write organized style sheets</li>            
+</ul>
+
+
+<h4>Important Declaration</h4>
+
+<p>Is a last resort in CSS deconfliction and should never bed used without a valid reason because it will overwrite EVERYTHING.</p>
+
+<pre>
+p {
+   color: red <code>!important</code>;
+}
+</pre>
+
+
+
+<?php include('ssi/boxmodelreset.ssi');?> 
+
+
+<h3>Borders</h3>
+
+<p>Elements can have two sets of borders. For example, note the <code>border-top</code> in addition to the wrap around <code>border</code>:</p>
+
+    <dl>
+        <dt>.sidebar {</dt>
+            <dd>width: 30%;</dd>
+            <dd>float: right;</dd>
+            <dd>margin: 10px;</dd>
+            <dd>background: #faebc7;</dd>
+            <dd>padding: 10px 20px;</dd>
+            <dd class="background">border: 1px dotted #fc6512;</dd>
+            <dd class="background">border-top: 20px solid #fc6512;</dd>
+        <dt>}</dt>
+    </dl>
+
+<p>Border values can also be done in shorthand:</p>
+
+    <dl>
+        <dt>.borderTest {</dt>
+            <dd>border-width: 1px 4px 9px 7px;</dd>
+            <dd>border-color: red green blue black;</dd>
+            <dd>border-style: solid dotted dashed outset;</dd>
+        <dt>}</dt>
+    </dl>
+    
+    <div id="bordertest">
+    	<p>Test</p>
+    </div>
+
+
+
+<h3>Border Styles</h3>
+
+<div id="borderStyle">
+    <p class="borderStyleSolid">This is the solid border style.</p>
+    <p class="borderStyleDotted">This is the dotted border style.</p>
+    <p class="borderStyleDashed">This is the dashed border style.</p>
+    <p class="borderStyleDouble">This is the double border style.</p>
+    <p class="borderStyleGroove">This is the groove border style.</p>
+    <p class="borderStyleRidge">This is the ridge border style.</p>
+    <p class="borderStyleInset">This is the inset border style.</p>
+    <p class="borderStyleOutset">This is the outset border style.</p>
+</div>
+
+
+<h3>Color Options</h3>
+
+    <dl>
+    	<dt>element {</dt>
+        <dd>color: rgb(23%,24%,18%);</dd>
+    <dt>}</dt>
+    </dl>
+
+<p class="italic">or</p>
+
+    <dl>
+    	<dt>element {</dt>
+        <dd>color: rgb(227,237,194);</dd>
+    	<dt>}</dt>
+    </dl>
+
+
+
+
+<h3>Named Colors</h3>
+
+
+
+<table id="namedColors" border="0" cellpadding="0" cellspacing="0" width="65%">
+  <tbody><tr>
+    <td><p class="black">Black = #000000</p></td>
+    <td><p class="greentext">Green = #008000</p></td>
+  </tr>
+  <tr>
+    <td><p class="silver">Silver = #C0C0C0</p></td>
+    <td><p class="lime">Lime = #00FF00</p></td>
+  </tr>
+  <tr>
+    <td><p class="grey">Grey = #808080</p></td>
+    <td><p class="olive">Olive = #808000</p></td>
+  </tr>
+  <tr class="darkbackground">
+    <td bgcolor="#990000"><p class="white">White = #FFFFFF</p></td>
+    <td bgcolor="#990000"><p class="yellow">Yellow = #FFFF00</p></td>
+  </tr>
+  <tr>
+    <td><p class="maroon">Maroon = #800000</p></td>
+    <td><p class="navy">Navy = #000080</p></td>
+  </tr>
+  <tr>
+    <td><p class="red">Red = #FF0000</p></td>
+    <td><p class="blue">Blue = #0000FF</p></td>
+  </tr>
+  <tr>
+    <td><p class="purple">Purple = #800080</p></td>
+    <td><p class="teal">Teal = #008080</p></td>
+  </tr>
+  <tr>
+    <td><p class="fuchsia">Fuchsia = #FF00FF</p></td>
+    <td><p class="aqua">Aqua = #00FFFF</p></td>
+  </tr>
+</tbody></table>
+
+<p>In 6 digit hexadecimal color values like this #FFCC99, <span class="red">FF</span> represents the <span class="red">RED</span> value, <span class="greentext">CC</span> is the <span class="greentext">GREEN</span> value, and <span class="blue">99</span> is the <span class="blue">BLUE</span> value.</p>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<!--<h3>Login Bar</h3>
+
+<div id="samplecontainer">
+
+<ul id="register">
+	<li id="reg">Not registered? <a href="#">Register</a> now!</li>
+	<li id="find"><a href="#">Find a store</a></li>
+</ul>
+
+<div id="message">
+	<p><strong>Special this week:</strong> $2 shipping on all orders! <a href="#">LEARN MORE</a></p>
+</div>
+
+</div>--><!-- close samplecontainer/********** CSScomment **********/ -->
+
+
+
+<!--<h3>CSS Properties to Memorize</h3>
+
+<p> 
+	display: inline;
+	list-style-type: square;
+	letter-spacing: 1px;
+	font-variant: small-caps;
+	overflow: hidden;
+	border-top-width: 5px;    
+	font: bold .8em/normal Verdana, Arial, Helvetica, sans-serif;
+	background-position: 0px 2px;    
+</p>
+
+<p>Margin and padding in lists need to be zeroed out because of browser defaults</p>
+
+-->
+
+
+    
+</div><!-- end .content -->
+
+<?php include('ssi/footer.ssi');?> 
+
+</div><!-- end .container -->
+</body>
+</html>

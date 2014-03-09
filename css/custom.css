@@ -1,0 +1,853 @@
+/* ----------------------------------------------------------------------- 
+                                  Custom Styles 
+----------------------------------------------------------------------- */
+
+
+/************************************************
+*************************************************
+1. Layout
+2. Typography
+3. Links
+4. Colors
+5. CSS3
+6. Clearing
+7. Borders
+8. Font Styles
+9. Horizontal Rules
+10. Navigation
+11. Table Styles
+12. Forms
+13. Positioning
+14. Lists
+*************************************************
+************************************************/
+
+/* -------------------------- 
+		  1. Layout 
+--------------------------- */
+
+.container {margin-bottom: 5em;}
+.excerpt {
+    background-color: #F8F7F2;
+    color: #666666;
+    font-family: "Trebuchet MS", Arial,Helvetica,sans-serif;
+    margin: auto;
+    padding: 20px 30px;
+   /* width: 90%;*/
+}
+.excerpt strong {
+	color: #666;
+}
+.excerpt p, .excerpt li {
+	font-family: "Trebuchet MS", Arial,Helvetica,sans-serif;
+	line-height: 1.7em;
+}
+.excerpt h4 {margin: 0 0 .5em;}
+.excerpt pre {
+	margin: 0;
+	margin-left: 1em;
+}
+.news {
+	width: 30%;
+	padding: 1.75%;
+	font-size: 90%;
+	line-height: 1.8;
+	background: rgb(237,226,197);
+	margin: 0 4% 2em 0;
+	float: left;
+}
+.news + .news {margin-right: 0;}
+.imgFlex {max-width: 100%;}
+img.imgScale {
+    float: left;
+    margin: .4em 1em 0 0;  /* Note: margin-top is to match text styling for current site only */
+}
+img, fieldset {border: 0 none;}
+.layoutPlan {
+    border: 1px solid #CCCCCC;
+    margin-bottom: 2em;
+	height: 415px;
+    width: 551px;
+}
+.declarationDemo-col-a {
+	/*background: #ccc;*/
+	float: left;
+	width: 40%;
+	padding-top: 1em;
+	border: none;
+	margin-right: 1em;
+}
+.declarationDemo-col-a + .declarationDemo-col-a {
+	margin-right: 0;  /* second instance of news class’s margin value is canceled */
+}
+.bodyHighlight {
+	margin: 2em 0;
+	padding: 1em 2em .5em; 
+	background: rgb(255,255,204);
+	border-radius: 10px;
+	width: 90%;
+}
+.bodyHighlight h4 {
+	margin-top: 0;
+}
+.bodyHighlight p {
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	color: #666;
+}
+
+	
+
+
+/* -------------------------- 
+         2. Typography 
+--------------------------- */
+
+
+h1, h2, h3, h4, h5, p, ul, ol, li {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+p, li {
+	font-weight: normal;
+	letter-spacing: .005em;
+}
+header h1 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1em;
+}
+h2, h3, h4 {
+	margin: 1.5em 0 .5em;
+	font-weight: 500;
+	color: #444;
+}
+h2:first-of-type {
+	margin-top: 0;
+}
+h3 {
+	border-bottom: 3px double rgba(0,0,0,.2);
+	padding-bottom: .1em;
+}
+h5 { 
+	font-size: 14px; 
+	/*line-height: 21px;
+	margin: 0 0 .5em;*/
+	font-weight: bold;
+	color: #444;	
+}
+.twelve h3:first-of-type {margin-top: 1em;} /* There is also a :last-of-type */
+.sidebar nav h3 {
+	margin-top: 0;
+	border-bottom: none;
+}
+p {margin: 0 0 1em;}
+.indent {margin-left: 2em;}
+.indent p.note, span.note {margin-bottom: 1em;}
+.indent pre {margin-bottom: 1em;}
+p.italic {font-style: italic;}
+p.note, span.note {
+    color: red;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 0.95em;
+	margin-bottom: 1.5em;
+	line-height: 1.2em;
+}
+.note a {
+	color: red;
+}
+.content .note a {
+	color: red;
+	border-bottom: 1px dotted red;
+}
+ol, ul.square, ul.circle, ul.disc {margin-left: 2.5em;}
+ul.square, li.square {list-style: square outside;}
+#announcement li {
+    background: url("../images/bullet.png") no-repeat scroll 0 9px transparent;
+    list-style: none outside none;
+    margin-left: 5px;
+    padding: 4px 0 4px 25px;
+}
+ul.disc ul li {
+	list-style: circle;
+}
+.dropCap p:first-of-type:first-letter {
+	float: left;
+	font: bold 62px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	margin: 6px 6px 0 0;
+	line-height: .65; /* Webkit/Firefox :first-of-type spacing reconciliation */
+}
+.dropCap p {line-height: 18px;}
+code {
+    color: #009;
+    font-family: Courier,monospace;
+	line-height: 1em;
+    /*font-size: 1em;*/
+}
+pre {
+    color: #009;
+    font-family: "Courier New", Courier, monospace;
+    font-size: .85em;
+    line-height: 1.2em;
+    margin: 0 0 1.5em 1em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre strong {
+	font-weight: bold;
+}
+/*pre strong {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+}*/
+
+.letterSpacing {letter-spacing: 5px;}
+.wordSpacing {word-spacing: 5px;}
+.mediaQueryColor {
+	color: maroon;
+	font-weight: bold;
+}
+.sampleText {color: #333;}
+
+.visibilityHidden { visibility: hidden; }
+
+
+/* -------------------------- 
+		  3. Links 
+--------------------------- */
+
+.sidebar ul li a {display: block;}
+.content a {
+	text-decoration: none;	
+	border-bottom: 1px dotted #444;
+}
+.content a:hover {
+	text-decoration: none;
+	border: none;
+}
+#links a {text-decoration: none;}
+#links a:hover {
+    color: #f0f;
+    text-decoration: underline;
+    font-weight: bold;
+}
+#links a:visted {color: #808;}
+#links a:active {color: #00f;}
+#backgroundcolor a:hover {
+    color: #fff;
+    font-weight: normal;
+    background-color: #000;
+    padding: 0 2px;
+}
+#backgroundcolor a {text-decoration: none;}
+#backgroundcolor a:visted {color: #808;}
+#backgroundcolor a:active {color: #00f;}
+/*.williamsonNote p a {
+	border-bottom: 1px dotted #06F;
+}
+.williamsonNote p a:hover {
+	border-bottom: none;
+}*/
+
+
+/* -------------------------- 
+      4. Color Classes 
+--------------------------- */	  
+
+.aqua { color: #00ffff; }
+.black { color: #000; }
+.blue {	color: #0000ff; }
+.fuchsia { color: #ff00ff; }
+.green { background: none repeat scroll 0 0 #99FF00; }
+.greentext { color: #008000; }
+.grey { color: #666; }
+.indianred { background: none repeat scroll 0 0 #CDA9A6; }
+.lime { color: #00FF00; }
+.maroon { color: #800000; }
+.navy { color: #000080; }
+.olive { color: #808000; }
+.orange { color: orange; }
+.purple { color: #800080; }
+.red { color: #ff0000; }
+.royalblue { color: #0000FF; }
+.silver { color: #c0c0c0; }
+.teal { color: #008080; }
+.white { color: #fff; } /*background-color: #000;*/
+.yellow { color: #ffff00; } /*background-color: #000;*/ 
+
+pre.alpha { color: rgba(0,0,0,.75); }
+.important { color: red; font-weight: bold; }
+
+/* Random Classes */
+
+.highlight {color: #F60;}
+
+
+/* -------------------------- 
+	      5. CSS3 
+--------------------------- */
+
+.bordertestCSS3 {
+    border: 1px solid #FFFFFF;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 5px 5px 10px #000000;
+    padding: 2em 1em .5em;
+    width: 95%;
+}
+.imgDropShadow {
+	float: left;
+     -moz-box-shadow: 5px 5px 10px #000; /*(10px highlight is the "blur" radius)*/
+	 -o-box-shadow: 5px 5px 10px #000;
+     -webkit-box-shadow: 5px 5px 10px #000;
+     box-shadow: 5px 5px 10px #000; /*(Default setting left in for later adoption)*/
+}
+img.imgDropShadow {
+	float: left;
+	margin-right: 2em;
+}
+pre.imgDropShadow {
+	font-size: .8em;
+	float: left;
+	padding: 1em 0 0 0;
+	box-shadow: none;
+	width: 45%;
+}
+pre.imgDropShadow p {
+	font-size: 14px;
+	color: #444;
+}
+.transbackground {
+    background: url("../images/grass.jpg") repeat scroll 0 0 transparent;
+    height: 100%;
+    padding: 10px;
+    width: 95%;
+}
+.transpContainer {width: 90%;}
+pre.transparency {
+	padding: 1em;
+	background-color: #f8f8f8;
+	background-color: rgba(250, 250, 250, .90);
+	margin: 0;
+}
+#alternating {
+	width: 100%;
+	margin-bottom: 2em;
+}
+#alternating td, #alternating tr {
+	border: none;
+	padding: 10px;
+	text-align: left;
+}
+table#alternating tr:nth-child(odd) {
+	background-color: #D8DFEE;
+}
+table#alternating tr:nth-child(even) {
+	background-color: #e9edf1;
+}
+p.shadow {
+    color: #FFFFFF;
+    font: bold 8em Arial,Helvetica,sans-serif;
+    margin: 0;
+    text-shadow: 2px 2px 5px #999999;
+}
+
+/* -------------------------- 
+	     6. Clearing
+--------------------------- */
+
+p.clear {
+	clear: both;
+	height: 0; /* Only for IE */
+	margin: 0;
+	padding: 0;
+}
+
+/* Clearfix */
+
+.cf:before, .cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {clear:both;}
+.redSquare {
+	float: left;
+	height: 100px;
+	width: 100px;
+	background: red;
+	margin: 0 1em 1em 0;
+}
+.blueSquare {
+	float: left;
+	height: 100px;
+	width: 100px;
+	background: blue;
+	margin: 0 1em 1em 0;
+}
+.clearfix p {font-size: 1em;}
+
+/* -------------------------- 
+		 7. Borders 
+--------------------------- */
+
+/*.borderTest {
+    border-width: 1px 4px 9px 7px;
+    border-color: red green blue black;
+    border-style: solid dotted dashed outset;
+}*/ 
+
+.borderTest {
+    border-color: red green blue black;
+    border-style: solid dotted dashed inset;
+    border-width: 1px 2px 3px 4px;
+    padding-left: 10px;
+    width: 50%;
+	margin-bottom: 2em;
+}
+.borderTest p {
+	margin: 1em 0;
+	text-align: center;
+}
+.borderStyleSolid {
+	border: solid 1px #000;
+	padding: 10px;
+	margin: 10px 0;
+}
+.borderStyleDotted {
+	border: dotted 1px #000;
+	padding: 10px;
+	margin-bottom: 10px;	
+}
+.borderStyleDashed {
+	border: dashed 1px #000;
+	padding: 10px;
+	margin-bottom: 10px;	
+}
+.borderStyleDouble {
+	border: double 3px #000;
+	padding: 10px;
+	margin-bottom: 10px;	
+}
+.borderStyleGroove {
+	border: groove 3px #000;
+	padding: 10px;
+	margin-bottom: 10px;	
+}
+.borderStyleRidge {
+	border: ridge 3px #000;
+	padding: 10px;
+	margin-bottom: 10px;	
+}
+.borderStyleInset {
+	border: inset 3px #000;
+	padding: 10px;
+	margin-bottom: 10px;	
+}
+.borderStyleOutset {
+	border: outset 3px #000;
+	padding: 10px;
+	margin-bottom: 10px;	
+}
+
+/* -------------------------- 
+	   8. Font Styles 
+--------------------------- */
+
+#fonts .times {font-family: Times,Times New Roman,serif;}
+#fonts p {
+    color: #333333;
+    font-size: 1.3em;
+    margin: 0 0 0.6em;
+}
+#fonts h4 {font-weight: bold;}
+#fonts .times { font-family: Times, Times New Roman, serif }
+#fonts .helvetica { font-family: Helvetica, Arial, sans-serif }
+#fonts .courier { font-family: Courier, Courier New, monospace }
+#fonts .georgia { font-family: Georgia, serif }
+#fonts .verdana { font-family: Verdana, sans-serif }
+#fonts .trebuchet { font-family: Trebuchet MS, sans-serif }
+#fonts .impact { font-family: Impact, sans-serif }
+#fonts .lucidaSans { font-family: Lucida Sans Unicode, Lucida Grande, sans-serif }
+#fonts .lucidaConsole { font-family: Lucida Console, monospace }
+#fonts .serif { font-family: serif }
+#fonts .sansSerif { font-family: sans-serif }
+#fonts .monospace { font-family: monospace }
+#fonts .cursive { font-family: cursive }
+
+
+/* -------------------------- 
+     9. Horizontal Rules 
+--------------------------- */
+
+hr.large {
+    background: none;
+    border: none;
+    height: 8px;
+    margin: 1em 0 2em;
+}
+
+/* -------------------------- 
+	   10. Navigation
+--------------------------- */
+
+/* Simple Vertical Menu */
+
+.verticalNav ul, .verticalNav li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.verticalNav li a {
+	display: block; /* this initial setting will stretch to full width of containing element unless width is applied */
+	width: 8em; /* width can also be applied to parent element (ul or li or ul, li) */
+	line-height: 2em; /* evens out vertical spacing to the center */
+	font-size: 1em;
+	text-decoration: none;
+	background: #D5973C;
+	color: white;
+	padding: .2em 0 .2em 1em;
+	border-bottom: .125em solid white;
+}
+.verticalNav li a:hover {
+	background: #87492F;
+	border-bottom: .125em solid white;
+}
+.verticalNav li a:focus {
+	background: #333;
+	border-bottom: .125em solid white;
+}
+.verticalNav li:last-child a {
+	border-bottom: none;
+}
+
+/* simple horizontal menu only */
+
+.horizontalNav ul, .horizontalNav li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.horizontalNav ul {margin-bottom: 2em;}
+.horizontalNav li {
+	float: left;
+}
+.horizontalNav li a {
+	display: block; /* this initial setting will stretch to full width of containing element unless width is applied */
+	width: 8em; /* width can also be applied to parent element (ul or li or ul, li) */
+	line-height: 2em; /* evens out vertical spacing to the center */
+	font-size: 1em;
+	text-decoration: none;
+	background: #D5973C;
+	color: white;
+	padding: .2em 0 .2em 1em;
+	border-right: .125em solid white;
+	border-bottom: none;
+}
+.horizontalNav li a:hover {
+	background: #87492F;
+	border-right: .125em solid white;
+}
+.horizontalNav li a:focus {
+	background: #333;
+	border-right: .125em solid white;
+}
+.horizontalNav li:last-child a {border-right: none;}
+
+/*horizontal menu + dropdowns */	
+div.menu {
+	background: #916A31;
+	height: 2.3em;
+	margin-bottom: 2em;
+}
+/*div*/.menu ul, /*div*/.menu li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font-size: 100%;
+}
+.menu ul {
+	background: #D5973C;
+	height: 2em;
+	width: 100%;
+	
+}
+.menu li {position: relative;}
+.menu li a {
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+	border-bottom: none;
+	/*background: fuchsia;*/
+}
+.menu li a:hover, .topmenu li:hover > a {
+	background: #916A31;
+	/*background: red;*/
+	height: 2em;
+	padding-top: .3em;
+	position: relative;
+	top: -.3em;
+	border-radius: .3em .3em 0 0;
+	font-size: 1em;
+	color: white;
+}
+.menu .current, a:hover.current, .topmenu li:hover a.current {
+	background: #AD9B7F;
+	color: #eee;
+	padding-top: .3em;
+	border-radius: .3em .3em 0 0;
+	position: relative;
+	top: -.3em;
+	border-bottom: .3em solid #917F63;
+	cursor: default;
+}
+/*dropdown menu styles*/
+ul.submenu {
+	float: none;
+	background: #916A31;
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 2em;
+	left: -9000em;
+	max-height: 0;
+	-moz-transition:max-height 0.15s ease-in-out;
+	-webkit-transition:max-height 0.15s ease-in-out;
+	-o-transition:max-height 0.15s ease-in-out;
+	transition:max-height 0.15s ease-in-out;
+	overflow: hidden;
+}
+ul.submenu li {float: none;}
+.topmenu li:hover ul {
+	left: 0;
+	max-height: 10em;
+}
+ul.submenu li a {
+	border-bottom: 1px solid white;
+	padding: .2em 1em;
+	white-space: nowrap;
+	font-size: 100%;
+}
+ul.submenu li:last-child a {
+	border-bottom: none;
+}
+ul.submenu li a:hover {
+	background: #D5973C;
+	height: 2em;
+	padding-top: .2em;
+	top: 0;
+	border-radius: 0;
+	border-bottom: 1px solid white;
+}
+
+
+/* -------------------------- 
+    11. Table Styles 
+--------------------------- */
+
+
+/*** Specificity Table ***/
+
+
+ table.specificity {
+	width: 100%;
+	margin: 0 auto 1em;
+	border: 1px solid #333;
+	border-collapse: collapse; /* will only work on a 'table' tag and collapse down to the highest value when two borders of different values collapse */
+	text-align: center;
+}
+.specificity th {
+    border-bottom: 2px solid black;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    font-size: 1em;
+    font-weight: bold;
+}
+.specificity td {
+	padding: 5px; /* Cell spacing doesn't really have a CSS attribute */
+	border: 1px solid #333;
+}
+.specificity th, td {
+	width: 15%;
+	border-top: 1px solid #999999;
+}
+.specificity th {padding: .5em 1em;}
+.specificity th.col1, .specificity td.col1 {width: 25%;}
+.specificity td {
+	border-bottom: 1px solid #999999;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+}
+table.specificity td.yellow  {
+	background: #ffcc00;
+	color: #333;
+}
+
+/*** Named Colors Table ***/
+
+div.namedColors  {
+	border: 2px solid #690;
+	width: 70%;
+	margin-bottom: 2em;
+}
+table.namedColors {background-color: #f8f8f8;}
+table.namedColors tr {height: 4em;}
+table.namedColors td {
+	text-align: center;
+	padding: 1em;
+	border: none;
+}
+table .darkBackground td {background: #990000;}
+
+
+/* Vendor Extention Prefixes table */
+
+table#vendorExtensions {margin-bottom: 2em;}
+
+table#vendorExtensions th {
+	border-top: 1px solid #999;
+    border-bottom: 2px solid black;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+table#vendorExtensions td {
+    border-bottom: 1px solid #999999;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.sidebar nav h3 {display: none;}
+}
+
+@media only screen and (max-width: 479px) {
+.sidebar nav h3 {display: none;}
+}
+
+/* -------------------------- 
+		 12. Forms 
+--------------------------- */
+
+label {
+	display: inline-block;
+}
+
+/* -------------------------- 
+	  13. Positioning 
+--------------------------- */
+.sampleCaption {
+	display: inline-block;
+	width: 190px;
+	height: 190px;
+	margin: 15px;
+	position: relative;	
+}
+.sampleCaption span {
+	position: absolute;
+	bottom: 5%;
+	left: 5%;
+	right: 5%;
+	background-color: rgba(255,255,255,.8);
+	padding: .5em;
+	font: 400 1.4em Titillium, Arial, sans-serif;
+	color: #666;
+	border: 1px dotted #000;
+	text-align: center;
+}
+.containerZ div {
+	margin-bottom: 25px;
+	width: 50px;
+	height: 50px;
+	padding: 25px;
+	font: 1.6em bold Arial, Helvetica, sans-serif;
+	color: white;
+}
+.containerZ {
+	background: rgb(237,228,214);
+	padding: 25px;
+	height: 100px;
+	position: relative;
+	margin-top: 25px;
+	margin-bottom: 75px;
+	border: 1px solid black;
+	z-index: 1;
+}
+.element1Z {
+	background: rgb(211, 206, 61);
+	position: absolute;
+	left: -50px;
+	top: -10px;
+	z-index: -1;
+}
+.element2Z {
+	background: rgb(85, 66, 54);
+	position: absolute;
+	left: 25px;
+	top: 50px;
+	z-index: 3;
+}
+.element3Z {
+	background: rgb(247,120,37);
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	z-index: 2;
+}
+#relative {
+    background: url("../_css/_images/relativepos.png") no-repeat scroll center top #FFCC00;
+    height: 300px;
+    margin-left: 175px;
+    width: 300px;
+	margin-bottom: 2em;
+}
+#absolute {
+    background: none repeat scroll 0 0 #FFFFFF;
+    float: left;
+    height: 150px;
+    margin-left: 75px;
+    margin-top: 75px;
+    position: absolute;
+    width: 150px;
+	text-align: center;
+}
+
+
+/* -------------------------- 
+	  14. Lists 
+--------------------------- */
+
+
+div.sampleLast-child {
+    margin-left: 25%;
+}	  
+.sampleLast-child ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sampleLast-child li a {
+	display: block;
+	width: 8em;
+	line-height: 2em;
+	font-size: 1em;
+	text-decoration: none;
+	background:  #D5973C;
+	color: white;
+	padding: .2em 0 .2em 1em;
+	border-bottom: .125em solid black;
+}
+.sampleLast-child li a:hover, sampleLast-child li a:focus {
+	background: #87492F;
+	border-bottom: .125em solid black;	
+}
+.sampleLast-child li:last-child a {
+	border-bottom: none;
+}
+ol li {
+	margin-bottom: 1.35em;
+}

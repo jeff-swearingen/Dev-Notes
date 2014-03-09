@@ -1,0 +1,19 @@
+<h4>Tools to Help With IE When Developing</h4>
+
+<ul class="square">
+	<li><a href="http://html5shiv.googlecode.com/svn/trunk/html5.js" target="_blank">HTML5 Shiv</a> (makes older IE versions conform to HTML5)</li>
+</ul>
+
+  
+<pre class="indent">  &lt;title&gt;<span class="highlight">Sample Title</span>&lt;/title&gt;
+  <span class="grey">&lt;!--[if lt IE 9]&gt;
+  &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">&lt;/script&gt;
+  &lt;![endif]--&gt;</span>
+</pre>
+
+<ul class="square">
+    <li><a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize</a> (reduces cross-browser styling differences)</li>
+    <li><a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Ultimate CSS Gradient Generator</a> (has IE hacks for CSS3 gradients)</li>
+    <li><a href="http://css3please.com/" target="_blank">CSS3, please!</a></li>
+    <li><a href="http://modernizr.com/" target="_blank">Modernizr (feature detection resource)</a></li>
+</ul>

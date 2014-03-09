@@ -1,0 +1,3 @@
+<h3>CSS Box Model</h3>
+<p><img src="../_ssi/_images/box_model.gif" alt="Box Model" height="400" width="400" /></p>
+<p>Total box size <em>is cumulative</em> = content + padding + border + margin</p>

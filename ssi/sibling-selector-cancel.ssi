@@ -1,0 +1,41 @@
+<h4>Sibling Selector Cancel</h4>
+
+<section class="cf">
+<div class="news">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae neque sit amet ipsum convallis hendrerit sed eget dolor. Etiam ultrices sagittis velit et tincidunt. Nunc dui enim, condimentum in consequat nec, dapibus quis lorem. Mauris non nisl nunc, sit amet elementum metus. Fusce euismod orci ac libero accumsan non vulputate justo posuere. Fusce quis augue eu nisl dignissim luctus. Cras pretium, mauris quis sagittis placerat, mauris odio feugiat leo, nec eleifend sem ante sed nunc. Sed non ante justo. Morbi rhoncus, risus vel adipiscing aliquam, neque lorem viverra dui, eget volutpat massa elit aliquet risus. Integer lacinia rutrum ornare.</p>
+</div>
+
+<div class="news">
+    <img src="../_ssi/_images/256_256.jpg" alt="nyc" width="256" class="imgFlex">
+</div>
+</section>
+
+<h5>Markup for this example:</h5>
+
+<pre>&lt;section class="cf"&gt;
+&lt;div class="news"&gt;
+    &lt;p&gt;<span class="grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae neque sit amet ipsum convallis hendrerit sed eget dolor. Etiam ultrices sagittis velit et tincidunt. Nunc dui enim, condimentum in consequat nec, dapibus quis lorem. Mauris non nisl nunc, sit amet elementum metus. Fusce euismod orci ac libero accumsan non vulputate justo posuere. Fusce quis augue eu nisl dignissim luctus. Cras pretium, mauris quis sagittis placerat, mauris odio feugiat leo, nec eleifend sem ante sed nunc. Sed non ante justo. Morbi rhoncus, risus vel adipiscing aliquam, neque lorem viverra dui, eget volutpat massa elit aliquet risus. Integer lacinia rutrum ornare.</span>&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="news"&gt;
+    <span class="fuchsia">&lt;img src="_images/256_256.jpg" alt="nyc" width="256" class="imgFlex"&gt;</span>
+&lt;/div&gt;
+&lt;/section&gt;</pre>
+
+
+<h5>CSS:</h5>
+
+<pre>.news {
+	background: rgb(237, 228, 214);
+	float: left;
+	width: 360px;
+	padding: 20px;
+	border: none;
+	border-radius: 15px 0 15px 0;
+	font-size: 90%;
+	margin-right: 50px;
+}
+
+.news + .news {
+	margin-right: 0;  <span class="grey">/* second instance of news class’s margin value is canceled */</span>
+}</pre>

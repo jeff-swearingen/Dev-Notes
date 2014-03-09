@@ -1,0 +1,9 @@
+<h4>HTML5 Block Conversion</h4>
+
+<p>This declaration forces older browsers to display these HTML5 elements as block level elements:</p>
+        
+        
+<pre>aside, article, section, header, footer, nav {
+    display: block;
+}</pre>
+        

@@ -1,0 +1,62 @@
+<h4>Naming Classes</h4>
+
+<p>Avoid naming classes where you'd have to rename things in both the CSS and Markup. Column names like "right" and "left" can cause headaches later if the floats need to change but names like "col-a" and "col-b" are much more interchangeable:</p>                    
+
+<section class="cf">                    
+<pre class="declarationDemo-col-a">
+<strong>Bad:</strong>
+
+.col-right {
+     background: #ccc;
+     border: 0;
+     color: #525252;
+     float:right;
+     margin:0;
+     padding: 0;
+}
+.col-left {
+     background: #fff;
+     border:0;
+     color: #252525;
+     float: left;
+     margin:0;
+     padding:0;
+}</pre>
+
+<pre class="declarationDemo-col-a">
+<strong>Good:</strong>
+
+<span class="red">.col-a</span> {
+     background: #ccc;
+     border: 0;
+     color: #525252;
+     float:right;
+     margin:0;
+     padding: 0;
+}
+<span class="red">.col-b</span> {
+     background: #fff;
+     border:0;
+     color: #252525;
+     float: left;
+     margin:0;
+     padding:0;
+}</pre>
+</section>
+
+<p>To avoid confusion, name things by what they are and note what they look like:</p>
+
+<section class="cf">
+<pre class="declarationDemo-col-a">
+<strong>Bad:</strong>
+
+.comment-blue { }
+.post-largefont { }</pre>
+
+<pre class="declarationDemo-col-a">
+<strong>Good:</strong>
+
+.comment-footer { }
+.post-title { } or .post-body { }
+</pre>
+</section>

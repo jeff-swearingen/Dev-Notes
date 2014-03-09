@@ -1,0 +1,52 @@
+.buttonExample {
+     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	 line-height: 2em;
+	 text-align: center;
+	 width: 8em;
+	 margin-bottom: 1em;
+     -moz-border-radius: 6px;
+     -o-border-radius: 6px;
+     -webkit-border-radius: 6px;
+	 border-radius: 6px;
+}
+a.buttonExample { 
+	color: white;
+	font-weight: bold;
+}
+
+.green { background: green; }
+a.green { border-bottom: none; }
+a.green:hover { background: black; }
+
+.blue { background: blue; }
+a.blue { border-bottom: none; }
+a.blue:hover { background: black; }
+
+.left { float: left; }
+.right { float: right; }
+
+.column-a { width: 50%; }
+
+
+
+
+@media all and (max-width: 774px) {
+.buttonExample {
+     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	 font-size: .5em;
+     color: white;
+     -moz-border-radius: 3px;
+     -o-border-radius: 3px;
+     -webkit-border-radius: 3px;
+	 padding: .5em;
+     border-radius: 6px;
+	 text-align: center;	 
+	 width: 8em;
+	 /*margin-bottom: 1em;*/
+	 border-bottom: none;
+}
+/*.buttonExample a{
+	border-bottom: none;
+}*/
+.column-a { width: 50%; }
+}

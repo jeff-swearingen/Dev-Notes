@@ -1,0 +1,235 @@
+.minitabs {
+   margin: 0;
+   padding: 0 0 20px 10px;
+   border-bottom: 1px solid #696;
+   margin-bottom: 1.5em;   
+}
+.minitabs li {
+   margin: 0;
+   padding: 0;
+   display: inline;
+   list-style: none;
+   background: none;   
+}
+.minitabs a {
+   float: left;
+   line-height: 14px;
+   font-weight: bold;
+   margin: 0 10px 4px 10px;
+   text-decoration: none;
+   color: #9c9;
+   border-bottom: none;
+}
+.minitabs a:hover {
+   border-bottom: 4px solid #696;
+   padding-bottom: 2px;
+   color: #363;
+}
+.minitabs a.active {
+   border-bottom: 4px solid #696;
+   padding-bottom: 2px;
+   color: #363;
+}
+.minitabs a:hover {
+   color: #696;
+}
+
+
+ul.linkDemo {
+    margin: 0;
+    padding: 0;
+	padding-bottom: 2em;
+}
+ul.linkDemo li { /* fix for this page only */
+    padding: 0;
+    list-style: none;
+}
+.linkDemo a {
+    display: block;
+    float: left;
+    width: 175px;
+    height: 25px;
+    background: url(../images/nav_rollover.jpg) no-repeat left bottom;
+    color: white;
+    font-weight: bold;
+    padding-left: 25px;
+    text-decoration: none;
+	border-bottom: none;
+}
+.linkDemo a:hover {
+    background-position: left top;
+    color: #f8b449;
+}
+
+
+.mainNav {
+    margin: 0 0 2em 0;
+    padding: 0;
+    list-style: none;
+    border-left: 1px dashed #999;
+    overflow: hidden;
+    zoom: 1; /* IE 6 bug fix */
+}
+.mainNav li {
+    float: left;
+    width: 8.5em; /*original was 12em*/
+    margin: 0;
+    padding: 0;
+}
+.mainNav a {
+    color: #000;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px dashed #999;
+    border-left: none;
+    padding: 5px 5px 5px 30px; /*orignal: 7px 5px 7px 30px;*/
+    display: block;
+    background-color: #e7e7e7;
+    background-image: url(../images/nav.png);
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    zoom: 1; /* IE 6 bug fix */
+}
+.mainNav a:hover {
+    font-weight: bold;
+    background-color: #b2f511;
+    background-position: 3px 50%;
+	border-top: 1px dashed #999;
+	border-right: 1px dashed #999;
+	border-bottom: 1px dashed #999;
+}
+.home .homeLink, .feature .featureLink, .expert .expertLink, .quiz .quizLink, .project .projectLink, .horoscope .horoscopeLink {
+    background-color: #fff;
+    background-position: 3px 100%;
+    padding-right: 15px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+.sampleNav {
+	float: left;
+	width: 90%;
+	margin: 0;
+	padding: 10px 0 0 46px;
+	list-style: none;
+	background: #ffcb2d url(../images/nav_bg.gif) repeat-x bottom left;
+}
+ul.sampleNav  {
+	margin-bottom: 25px;
+}
+.sampleNav li {
+	float: left;
+	margin: 0 1px 0 0;
+	padding: 0;
+	font-family: "Lucida Grande", sans-serif;
+	font-size: .80em;
+	list-style: none;
+}
+.sampleNav a {
+	float: left;
+	display: block;
+	margin: 0;
+	padding: 4px 8px;
+	color: #333;
+	text-decoration: none;
+	border: 1px solid #9b8748;
+	border-bottom: none;
+	background: #f9e9a9 url(../images/off_bg.gif) repeat-x top left;
+}
+.sampleNav a:hover, div.intro .t-intro a {
+	color: #333;
+	padding-bottom: 5px;
+	border-color: #727377;
+	border: 1px solid #727377;
+	border-bottom: none;
+	background: #fff url(../images/on_bg.gif) repeat-x top left;
+}
+#gearSubNav {
+    width: 340px;
+    /*margin: 0 auto;*/
+    list-style: none;
+}
+#gearSubNav li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#gearSubNav a {
+    display: block;
+    width: 70px;
+    height: 20px;
+    font-family: "Orator Std", Orator, sans-serif;
+    font-size: .9em;
+    text-align: center;
+    padding-top: 100px; /* make room for the image */
+    margin-right: 20px;
+    border: none;
+    background: url(../images/GroundswellSprites.png);
+    text-decoration: none;
+    color: #b36b00;	
+}
+#gearSubNav a:hover {
+    color: #000;
+}
+#gearSubNav a.last {
+    margin-right: 0;
+}
+
+/* ===== gear subnav icons ===== */
+
+#gearSubNav a.boards { background-position: -490px -60px; }
+#gearSubNav a.swimwear { background-position: -210px -60px; }
+#gearSubNav a.wetsuits { background-position: -70px -60px; }
+#gearSubNav a.etc { background-position: -350px -60px; }
+
+#gearSubNav a.boards:hover { background-position: -420px -60px; }
+#gearSubNav a.swimwear:hover { background-position: -140px -60px; }
+#gearSubNav a.wetsuits:hover { background-position: -0px -60px; }
+#gearSubNav a.etc:hover { background-position: -280px -60px; } 
+
+#spritessheet {
+	width: 100%;
+	padding: 15px 0 15px 15px;
+}
+
+#spritessheet div#column1 {
+	float: left;
+	width: 17%;	
+}
+
+
+#spritessheet div#column2 {
+	float: left;
+	width: 18%;
+}
+
+#spritessheet div#column3 {
+	float: left;
+	width: 13%;	
+}
+
+#spritessheet div#column4 {
+	float: left;
+	width: 17%;
+}
+
+#spritessheet div#column5 {
+	float: left;
+	width: 30%;
+}
+
+#spritessheet pre {
+	font-size: 70%;
+	margin: 0 -15px;
+	padding: 0;
+	color: #000;
+	line-height: normal;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+#spritessheet img {
+	border: 1px solid silver;
+	margin: 30px 0 0 30px;
+	/*padding: 30px 10px 0 30px;*/
+}

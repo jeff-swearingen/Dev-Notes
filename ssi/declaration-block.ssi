@@ -1,0 +1,16 @@
+<h3>Declaration Block</h3>
+
+<p><strong>Declaration block:</strong> {<span class="highlight">font</span>: <span class="royalblue">1px Arial</span>; <span class="highlight">color</span>: <span class="royalblue">#000</span>;}</p>
+<p><strong>Property:</strong> Anything <span class="highlight">before</span> a colon inside the <strong>declaration block</strong></p>
+<p><strong>Value:</strong> Anything <span class="royalblue">after</span> the colon inside the <strong>declaration block</strong></p>
+
+<h5>Example:</h5>
+
+<pre>
+<span class="royalblue">h1</span> {
+<span class="green">font</span>: <span class="indianred">1em Arial</span>;
+<span class="green">color</span>: <span class="indianred">#000</span>;
+}
+
+<span class="royalblue">Selector</span>, <span class="green">Property</span>, <span class="indianred">Value</span>
+</pre>

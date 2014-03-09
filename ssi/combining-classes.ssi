@@ -1,0 +1,47 @@
+<h4>Combining Classes</h4>
+
+<p>By writing separate classes that can be used in combination with one another, you can minimize having to write multiple sets of something like a button class:</p>
+
+<div class="cf column-a">
+<a href="#" class="buttonExample green left">Green Button</a>
+<a href="#" class="buttonExample blue right">Blue Button</a>
+</div>
+
+<h5>Markup:</h5>
+<pre>&lt;div class="cf column-a"&gt;
+&lt;p class="buttonExample green left"&gt;<span class="grey">Green Button</span>&lt;/p&gt;
+&lt;p class="buttonExample blue right"&gt;<span class="grey">Blue Button</span>&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<h5>CSS:</h5>
+<pre>.buttonExample {
+     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+     line-height: 2em;
+     text-align: center;
+     width: 8em;
+     margin-bottom: 1em;
+     -moz-border-radius: 6px;
+     -o-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     border-radius: 6px;
+}
+a.buttonExample {
+     color: white;
+     font-weight: bold;
+}
+
+.green { background: green; }
+a.green { border-bottom: none; }
+a.green:hover { background: black; }
+
+.blue { background: blue; }
+a.blue { border-bottom: none; }
+a.blue:hover { background: black; }
+
+.left { float: left; }
+.right { float: right; }
+
+.column-a { width: 50%; }</pre>
+
+
+

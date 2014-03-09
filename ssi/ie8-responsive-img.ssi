@@ -1,0 +1,14 @@
+<h4>Fluid Images in IE 8</h4>
+
+<p>For fluid images to have a width of 100% width in IE 8, a property of <code>width</code> with a <code>value</code> of <code>auto</code> is required. For example:</p>
+
+<pre>img.left {
+	margin-right: 1em;
+	<span class="red">width: auto;</span>
+}
+img.right {
+	margin-left: 1em;
+	<span class="red">width: auto;</span>
+}</pre>
+
+<pre><span class="grey">&lt;!--[if IE 8]&gt;&lt;link rel="stylesheet" href="_css/customIE8.css"&gt;&lt;![endif]--&gt;</span></pre>

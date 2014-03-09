@@ -1,0 +1,12 @@
+<h4>Vertical Margin Collapse</h4>        
+
+<p>Margins only collapse when they're touching each other (except for inline boxes) and are used so things don't start stacking up left and right out of control. Horizontal margins do not collapse.</p>
+
+<p>When two vertical margins of different values are touching each other:</p>
+        
+<pre>p {
+    margin: 10px 0;
+    margin-top: 20px;
+}</pre>
+
+<p>You're always going to get the larger of the two.</p>

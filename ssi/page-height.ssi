@@ -1,0 +1,11 @@
+<section class="bodyHighlight">
+<h4>100% Page Height</h4>
+    <p>When displaying an image in the background of a web page, browsers don't always vertically position the image in the way you'd expect. For example, if you set the vertical position to <code>bottom</code>, the image doesn't always appear at the bottom of the browser window. This happens when the content on a page is shorter than the browser window is tall.</p>
+    
+    <p>If the web page has only a couple of paragraphs of text and it's displayed on a really large monitor, most browsers treat the &quot;bottom&quot; as the bottom of the last paragraph, not the bottom of the browser window. If you run into this annoyance, then just add this style to your style sheet:</p>
+    
+<pre>html {
+     height: 100%;
+}</pre>  
+    
+</section><!-- close excerpt -->

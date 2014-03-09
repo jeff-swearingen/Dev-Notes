@@ -1,0 +1,58 @@
+<h4>REMS</h4>
+<p>A <code>rem</code> (root em) behaves just like an em but it sizes relative to the font-size of the root element (the <code>html</code> element). This way it's possible to avoid the cascading issues caused by using <code>ems</code> in nested elements.</p>
+
+<!--<pre>
+html {
+     font-size: 100%; <span class="grey">/* equates to ~ 16px */</span>
+}
+h1 {
+     font-size: 1.5<span class="greenText">em</span>; <span class="grey">/* 24px / 16px */</span>
+}
+span {
+     font-size: 1<span class="red">rem</span>; <span class="grey">/* 16px / 16px */</span>
+}
+</pre>
+
+<p>The <code>h1</code> still uses a 24px <code>em</code> but the <code>span</code> element will display at 16px because it's using the <code>rem</code> inherited from the <code>html</code> tag and not from the containing <code>div</code>.</p>
+
+<p>Because of lack of mobile browser support, add a pixel size value before the <code>rem</code> value:</p>
+
+<pre>span {
+     font-size: 16px;
+     font-size: 1rem;
+}</pre>-->
+
+
+<pre>html {
+     font-size: 62.5%;
+     } 
+body {
+     font-size: 1.4rem; <span class="grey">/* =14px */</span>
+} 
+h1 {
+     font-size: 2.4rem; <span class="grey">/* =24px */</span>
+}</pre>
+
+<p>To avoid browser support issues with earlier versions of IE and mobile browsers, and a <code>font-size</code> property with a pixel value <em>above</em> the <code>rem</code> based <code>font-size</code> values:</p>
+
+<pre>html { 
+     font-size: 62.5%;
+} 
+body {
+     <span class="black">font-size: 14px;</span>
+     font-size: 1.4rem; <span class="grey">/* =14px */</span>
+} 
+h1 {
+     <span class="black">font-size: 24px;</span>
+     font-size: 2.4rem; <span class="grey">/* =24px */</span>
+}</pre>
+
+
+<p class="note">Because of the pixel fallback, any time the <code>rem</code> sizes are updated the pixel sized elements also have to be updated.</p>
+
+<p>Using CSS preprocessors like SASS or LESS can alleviate those kinds of maintenance issues:</p>
+
+<ul class="square">
+	<li><a href="http://sass-lang.com/" target="_blank">SASS</a></li>
+	<li><a href="http://lesscss.org/" target="_blank">LESS</a></li>
+</ul>

@@ -1,0 +1,54 @@
+.nthChild ol {
+	list-style: none;
+	/*margin-left: -40px;*/
+	margin-bottom: 40px;
+}
+.nthChild li {
+	background: beige;
+	padding: 2px 0 2px 5px;
+	margin: 1px 0;
+	width: 200px;
+	list-style: none;
+	font-size: .9em;
+}
+.nthChild2 li:nth-child(2) {
+	background: tan;
+}
+/*.nthChild2 ol {
+	list-style: none;
+	margin-left: -40px;
+}
+.nthChild2 li {
+	background: beige;
+	padding-left: 5px;
+	margin: .2em 0;
+	width: 200px;
+}*/
+.nthChild2n li:nth-child(2n) {  /* The n combined with 2n is a grouping element that targets every second element in the list */
+	background: tan;
+}
+.nthChildOdd li:nth-child(odd) {  /*Odd is a keyword that will format all odd numbered rows the tan value. 'Even' will format even rows.*/ 
+	background: tan;
+}
+
+.nthChildOffset5 li:nth-child(5n+5) { /* This is an example of an offset. The formatting starts at the 5th row and every 5 rows after will be formatted. */
+	background: tan;
+}
+
+.nthChildNegativeOffset li:nth-child(-2n+8) { /* A negative offset will go backwards. This starts at the 8th row and formats every second row up to the top of the list */
+	background: tan;
+}
+
+.nthChildNegativeOffsetMinusOne li:nth-child(5n-1) {/* This is formatting every 5th row minus 1 row, so rows four, nine, fourteen, and ninetine are highlighted. */
+	background: tan;
+}
+
+
+.nthChildDaisy li:nth-child(1n+6):nth-last-child(1n+6) {/* This the two nth child selectors are daisy-chained together. li:nth-child(1n+6) is formatting item six and every row after while :nth-last-child(1n+6) is starting from sixth from the bottom (fifteen) and formatting every row previous until they meet */
+	background: tan;
+}
+
+
+.nthChildGrouped li:nth-child(-1n+5), .nthChildGrouped li:nth-last-child(-1n+5) {/* Daisy chains only work in a contiguous selection. In a non-contiguous selection a group must be used (separated by a ',' instead of a ':' */
+	background: tan;
+}
